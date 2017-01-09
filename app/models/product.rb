@@ -31,7 +31,7 @@ class Product < ApplicationRecord
   scope :by_max_price, ->max do
     where "price <= #{max}" if max.present?
   end
-  
+
   def list_users_rated_product
     User.of_ids Rating.user_ids_by_product self.id
   end

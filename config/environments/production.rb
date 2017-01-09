@@ -23,13 +23,14 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
+  config.serve_static_assets = true
 
   config.consider_all_requests_local = true
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = true
-  host = 'whispering-peak-53168.herokuapp.com'
+  host = '/whispering-hollows-40582.herokuapp.com/'
   config.action_mailer.default_url_options = {host: host, protocol: 'http'}
 
   config.action_mailer.smtp_settings = {

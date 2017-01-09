@@ -16,7 +16,7 @@
     </div>
   </td>
   <td class="col-sm-2 text-center">
-    <% if order.is_confirm %>
+    <% if order.status == 1 %>
       <strong class="btn-primary"><%= t "order.status.accepted" %></strong>
     <% else %>
       <strong class="btn-warning"><%= t "order.status.waiting" %></strong>

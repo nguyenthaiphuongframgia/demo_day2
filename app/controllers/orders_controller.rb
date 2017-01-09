@@ -14,7 +14,7 @@
     @order = current_user.orders.build order_params
     ActiveRecord::Base.transaction do
       if @order.save
-        current_user.send_order_email
+        #current_user.send_order_email "dat hang"
         add_order_item
         destroy_cart
       else

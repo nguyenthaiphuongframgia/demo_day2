@@ -23,19 +23,12 @@
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.fr.js
 //= require_tree .
 
-<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
 
 $(document).ready(function(){
   $(document).on('click','.signup-tab',function(e){
     e.preventDefault();
     $('#signup-taba').tab('show');
   });
-
-  $(.tab-content).load(function(e){
-    $('#signin-taba').tab('show');
-    e.preventDefault();
-    $('#signup-taba').tab('');
-   });
 
   $(document).on('click','.signin-tab',function(e){
     e.preventDefault();

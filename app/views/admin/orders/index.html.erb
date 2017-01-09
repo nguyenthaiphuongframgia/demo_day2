@@ -38,7 +38,7 @@
         <th class="col-md-2"><%= t ".address" %></th>
         <th class="col-md-2"><%= t ".phone" %></th>
         <th class="col-md-1"><%= t ".status" %></th>
-        <th class="col-md-3"><%= t ".options" %></th>
+        <th class="col-md-2"><%= t ".options" %></th>
       </tr>
     </thead>
     <tbody>
@@ -59,12 +59,10 @@
                 <span class="btn-danger"> <%= t("reject")%> </span>
               <% end %>
             </td>
-            <td class="col-md-3">
-              <%= link_to t("pending"), admin_order_path(order, status: 0),
-                method: :put, remote: true, class: "btn btn-warning margin_width" %>
-              <%= link_to t("approve"), admin_order_path(order, status:1),
+            <td class="col-md-2">
+              <%= link_to t("approve"), admin_order_path(order, status: 1),
                 method: :put, remote: true, class: "btn btn-info margin_width " %>
-              <%= link_to t("reject"), admin_order_path(order, status:2),
+              <%= link_to t("reject"), admin_order_path(order, status: 2),
                 method: :put, remote: true, class: "btn btn-danger margin_width " %>
             </td>
           </tr>

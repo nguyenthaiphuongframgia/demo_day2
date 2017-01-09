@@ -15,8 +15,6 @@ class Admin::OrdersController < ApplicationController
     @user = User.find @order.user_id
     if @order.save
       case @order.status
-      when 0
-        flash[:success] = "You had choosed Pending"
       when 1
         flash[:success] = "You had choosed Approve"
         UserMailer.orders_success(@user,"aprove").deliver_now

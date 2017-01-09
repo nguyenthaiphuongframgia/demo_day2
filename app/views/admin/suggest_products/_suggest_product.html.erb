@@ -19,9 +19,8 @@
     <% else %>
       <span class="btn-danger"> <%= t("reject")%> </span>
     <% end %>
+  </td>
   <td>
-    <%= link_to t("pending"), admin_suggest_product_path(suggest_product, status: "Pending"),
-      method: :put, remote: true, class: "btn btn-warning margin_width" %>
     <%= link_to t("approve"), admin_suggest_product_path(suggest_product, status: "Approved"),
       method: :put, remote: true, class: "btn btn-info margin_width " %>
     <%= link_to t("reject"), admin_suggest_product_path(suggest_product, status: "Reject"),
